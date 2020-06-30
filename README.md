@@ -1,9 +1,9 @@
 <h1 align="center">
-    <img alt="Find Lyrics" src=".github/webmotors-logo.png">
+    <img alt="SKY" src=".github/sky-logo-tv.png">
 </h1>
 
 <h3 align="center">
-  Webmotors test Search developed with React e Redux: <a href="https://alineaferreira.github.io/webmotors-test/" target="_blank">Live Demo</a>
+  SKY homepage test developed: <a href="https://alineaferreira.github.io/sky-test/" target="_blank">Live Demo</a>
 </h3>
 
 
@@ -11,11 +11,11 @@
 
 This project was developed with the following technologies:
 
--  [React Js](https://reactjs.org/)
--  [Redux](https://redux.js.org/)
--  [Styled-components](https://www.styled-components.com/)
--  [react-icons](https://react-icons.github.io/react-icons/)
--  [Axios](https://github.com/axios/axios)
+-  [HTML5](https://developer.mozilla.org/pt-BR/docs/Web/HTML/HTML5)
+-  [SASS](https://sass-lang.com/)
+-  [JQuery - Ajax](https://jquery.com/)
+-  [NPM](https://www.npmjs.com/)
+-  [Gulp 4](https://gulpjs.com/)
 -  [VS Code](https://code.visualstudio.com/) with ESLint.
 
 
@@ -24,16 +24,19 @@ This project was developed with the following technologies:
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/AlineAFerreira/webmotors-test.git
+$ git clone https://github.com/AlineAFerreira/sky-test
 
 # Access the folder
-$ cd findLyrics-react
+$ cd sky-test
 
 # Install dependencies
-$ yarn install
+$ npm install
 
-# Run the app
-$ yarn start
+# Watch changes in styles and scripts
+$ gulp
+
+# To clean and re-build dist 
+$ gulp build
 
 ```
 
