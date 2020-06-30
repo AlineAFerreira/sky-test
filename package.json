@@ -5,8 +5,7 @@
   "homepage": "https://alineaferreira.github.io/sky-test/",
   "main": "index.js",
   "scripts": {
-    "predeploy": "gulp build",
-    "deploy": "gh-pages -d dist"
+
   },
   "keywords": [],
   "author": "Aline Ferreira",
