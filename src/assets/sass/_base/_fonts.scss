@@ -6,8 +6,8 @@
 
 @font-face {
   font-family: 'SKY-Icon';
-  src: url("../fonts/SKY-Icon-Font.eot");
-  src: url("../fonts/SKY-Icon-Font.eot?#iefix") format("embedded-opentype"), url("../fonts/SKY-Icon-Font.woff") format("woff"), url("../fonts/SKY-Icon-Font.ttf") format("truetype");
+  src: url($fonts_path + "/SKY-Icon-Font.eot");
+  src: url($fonts_path + "/SKY-Icon-Font.eot?#iefix") format("embedded-opentype"), url($fonts_path + "/SKY-Icon-Font.woff") format("woff"), url($fonts_path + "/SKY-Icon-Font.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; 
 }
