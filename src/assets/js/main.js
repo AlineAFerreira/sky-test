@@ -43,13 +43,14 @@ window.SKY = {
   },
 
   getTheme() {
-    this.darkTheme = eval(atob(localStorage.getItem(btoa('dark-theme')))) || false;
+    this.darkTheme = eval(localStorage.getItem(btoa('dark-theme'))) || false;
+
     this.setTheme();
   },
 
   setTheme() {
     this.darkTheme? $('body').addClass('dark') : $('body').removeClass('dark');
-    localStorage.setItem(btoa('dark-theme'), btoa(this.darkTheme));
+    localStorage.setItem(btoa('dark-theme'), this.darkTheme);
   },
 
   switchTheme() {
