@@ -5,7 +5,7 @@
   "homepage": "https://alineaferreira.github.io/sky-test/",
   "main": "index.js",
   "scripts": {
-    "predeploy": "gulp build",
+    "predeploy": "gulp",
     "deploy": "gh-pages -d build"
   },
   "keywords": [],

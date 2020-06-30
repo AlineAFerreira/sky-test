@@ -2,17 +2,27 @@ window.SKY = {
   highlights: [],
   carousels: [],
   darkTheme: false,
+  fontSize: 14,
 
   init() {
     this.getTheme();
+    this.getFontSize();
     this.configEvents();
     this.getData();
   },
 
   configEvents() {    
-    $('[changeTheme]').on('click', ()=>{
+    $('[changetheme]').on('click', ()=> {
       this.switchTheme();
-    })
+    });
+
+    $('[increasefont]').on('click', ()=> {
+      this.increaseFontSize();
+    });
+
+    $('[decreasefont]').on('click', ()=> {
+      this.decreaseFontSize();
+    })    
   },
 
   getData() {
@@ -33,20 +43,42 @@ window.SKY = {
   },
 
   getTheme() {
-    this.darkTheme = eval(localStorage.getItem(btoa('dark-theme'))) || false;
-    console.log(this.darkTheme);
+    this.darkTheme = eval(atob(localStorage.getItem(btoa('dark-theme')))) || false;
     this.setTheme();
   },
 
   setTheme() {
     this.darkTheme? $('body').addClass('dark') : $('body').removeClass('dark');
-    localStorage.setItem(btoa('dark-theme'), this.darkTheme);
+    localStorage.setItem(btoa('dark-theme'), btoa(this.darkTheme));
   },
 
   switchTheme() {
     this.darkTheme = !this.darkTheme;
     this.setTheme();
+  },
 
+  getFontSize() {
+    this.fontSize = parseInt(atob(localStorage.getItem(btoa('fontSize')))) || this.fontSize;
+    this.setFont();
+  },
+
+  setFont() {
+    $('html').attr('style', `font-size: ${this.fontSize}px`)
+    localStorage.setItem(btoa('fontSize'), btoa(this.fontSize));
+  },
+
+  increaseFontSize() {
+    if (this.fontSize < 18) {
+      this.fontSize++;
+      this.setFont();
+    }    
+  },
+
+  decreaseFontSize() {
+    if (this.fontSize > 10 && this.fontSize <= 18) {
+      this.fontSize--;
+      this.setFont();
+    }    
   },
 
   makeHighlights() {
