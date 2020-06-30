@@ -6,17 +6,34 @@
 $main-color: #F35C58;
 $light-gray: #F1F2FA;
 
+$bg-color: #fafaff;
 $text-color: #606064;
 $bg-header: $light-gray;
 $bg-footer: $light-gray;
+
+
 
 $fonts_path: '../../src/assets/fonts';
 $imgs_path: '../../src/assets/images';
 
 $logo-principal: $imgs_path + '/logo-sky.svg';
 $logo-footer: $imgs_path + '/logo-sky-gray.svg';
+
 $icon-app: $imgs_path + '/app-icon.png';
 $img-appStore: $imgs_path + '/button-apple-store.svg';
 $img-appStore-over: $imgs_path + '/button-apple-store-over.svg';
 $img-googleplay: $imgs_path + '/button-google-play.svg';
 $img-googleplay-over: $imgs_path + '/button-google-play-over.svg';
+
+//Theme dark
+$dark-bg-color: #1b2021;
+$dark-text-color: #FFF;
+$dark-bg-header: #32383a;
+$dark-bg-nav: #32383a;
+$dark-bg-footer: #32383a;
+$dark-bg-footer-bottom: #1b2021;
+
+
+$logo-footer-dark: $imgs_path + '/logo-sky-white.svg';
+$img-appStore-dark: $imgs_path + '/button-apple-store-dark.svg';
+$img-googleplay-dark: $imgs_path + '/button-google-play-dark.svg';

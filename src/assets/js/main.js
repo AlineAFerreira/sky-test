@@ -1,9 +1,18 @@
 window.SKY = {
   highlights: [],
   carousels: [],
+  darkTheme: false,
 
   init() {
+    this.getTheme();
+    this.configEvents();
     this.getData();
+  },
+
+  configEvents() {    
+    $('[changeTheme]').on('click', ()=>{
+      this.switchTheme();
+    })
   },
 
   getData() {
@@ -21,6 +30,23 @@ window.SKY = {
         console.log(error.statusText, error.status);
       }
     });
+  },
+
+  getTheme() {
+    this.darkTheme = eval(localStorage.getItem(btoa('dark-theme'))) || false;
+    console.log(this.darkTheme);
+    this.setTheme();
+  },
+
+  setTheme() {
+    this.darkTheme? $('body').addClass('dark') : $('body').removeClass('dark');
+    localStorage.setItem(btoa('dark-theme'), this.darkTheme);
+  },
+
+  switchTheme() {
+    this.darkTheme = !this.darkTheme;
+    this.setTheme();
+
   },
 
   makeHighlights() {
