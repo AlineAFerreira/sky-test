@@ -10,7 +10,8 @@ $text-color: #606064;
 $bg-header: $light-gray;
 $bg-footer: $light-gray;
 
-$imgs_path: '../../src/assets/images/';
+$fonts_path: '../../src/assets/fonts';
+$imgs_path: '../../src/assets/images';
 
 $logo-principal: $imgs_path + '/logo-sky.svg';
 $logo-footer: $imgs_path + '/logo-sky-gray.svg';
@@ -19,10 +20,3 @@ $img-appStore: $imgs_path + '/button-apple-store.svg';
 $img-appStore-over: $imgs_path + '/button-apple-store-over.svg';
 $img-googleplay: $imgs_path + '/button-google-play.svg';
 $img-googleplay-over: $imgs_path + '/button-google-play-over.svg';
-
-
-
-
-
-
-

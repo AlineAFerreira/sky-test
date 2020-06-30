@@ -1,11 +1,9 @@
 'use strict';
- 
+
 const {src, dest, watch, series, parallel} = require('gulp');
 const replace = require('gulp-replace');
 const sass = require('gulp-sass');
 const uglify = require('gulp-uglify-es').default;
-const clean = require('gulp-clean');
-
 
 const files = {
   sassPath: 'src/assets/sass/**/*.scss',
@@ -37,21 +35,13 @@ function watchTask(){
     parallel(sassTask, jsTask));
 }
 
-function cleanDist(){
-  return src('dist')
-  .pipe(clean());
-}
-
-exports.build = series(
-  cleanDist,
+exports.default = series(
   parallel(sassTask, jsTask),
   cacheBustTask,
 )
 
-exports.default = series(
-  cleanDist,
+exports.watch = series(
   parallel(sassTask, jsTask),
   cacheBustTask,
   watchTask
 )
- 

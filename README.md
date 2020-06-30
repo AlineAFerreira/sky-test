@@ -33,10 +33,10 @@ $ cd sky-test
 $ npm install
 
 # Watch changes in styles and scripts
-$ gulp
+$ gulp watch
 
-# To clean and re-build dist 
-$ gulp build
+# To build dist 
+$ gulp
 
 ```
 
