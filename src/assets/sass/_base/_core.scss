@@ -1,0 +1,65 @@
+﻿// This is the Main Stylesheet
+// Theme Author: Aline Ferreira
+// Version: 1.0
+
+//CSS Style Structure
+
+
+// Fonts
+// Variables
+// General
+// Container
+
+
+@import '_base/fonts';
+@import '_base/variables';
+
+
+/*********************************
+* GENERAL 
+**********************************/
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: $base-font;
+    font-size: 14px;
+}
+
+body {    
+    color: $text-color;
+    background: #fafaff;
+    
+    button, select, input {
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+/*********************************************
+    CONTAINER 
+**********************************************/
+
+.container {
+    margin: 0 auto;
+    padding: 0 15px;
+
+    @media (min-width: 768px) {
+        width: initial;
+    }
+
+    @media (min-width: 992px) {
+        width: 970px;
+    }
+
+    @media (min-width: 1200px) {
+        width: 1170px;
+    }
+}
+

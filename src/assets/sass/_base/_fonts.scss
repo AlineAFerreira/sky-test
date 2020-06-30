@@ -1,0 +1,16 @@
+﻿// This is the file with the fonts variables
+// Theme Author: Aline Ferreira
+// Version: 1.0
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+
+@font-face {
+  font-family: 'SKY-Icon';
+  src: url("../fonts/SKY-Icon-Font.eot");
+  src: url("../fonts/SKY-Icon-Font.eot?#iefix") format("embedded-opentype"), url("../fonts/SKY-Icon-Font.woff") format("woff"), url("../fonts/SKY-Icon-Font.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; 
+}
+
+$base-font: 'Roboto', sans-serif;
+

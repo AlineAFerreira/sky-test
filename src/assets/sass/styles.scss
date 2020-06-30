@@ -1,0 +1,21 @@
+// This is the Main Stylesheet
+// Theme Author: Aline Ferreira
+// Version: 1.0
+
+//CSS Style Structure
+
+// mixin
+// core
+// header
+// nav-bar
+// highlights
+// movie-list
+// footer
+
+@import "_mixins/loading-pulse";
+@import "_base/core";
+@import "_components/header";
+@import "_components/nav-bar";
+@import "_components/highlights";
+@import "_components/movie-list";
+@import "_components/footer";

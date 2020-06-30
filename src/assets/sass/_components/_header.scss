@@ -1,0 +1,117 @@
+// Mixins used only in this component
+
+@mixin header-button() {
+  cursor: pointer;
+  span {
+    display: block;
+    position: relative;
+    font-size: 1rem;
+    font-weight: 500;
+
+    &:before {
+      content: attr(data-icon);
+      font-family: 'SKY-Icon';
+      font-size: 1.4rem;
+      margin-right: 6px;
+      vertical-align: -2px;
+      font-weight: normal;
+    }
+  }
+}
+
+// Styles of this component
+
+header {
+  background: $bg-header;
+  border-bottom: 1px solid #D3D3D8;
+
+  .box-header {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+
+    .box-logo {
+      width: 90px;
+      height: 40px;
+  
+      a {
+        display: block;
+        height: 100%;
+        text-indent: -9999px;
+        background: url($logo-principal) no-repeat center;
+      }
+    }
+  
+    .box-acessibility {
+      padding: 0 40px;
+
+      button {
+        width: 30px;
+        height: 30px;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        background-color: #FAFAFF;
+        margin: 0 8px;
+
+        &:before {
+          content: attr(data-icon);
+          display: block;
+          font-family: 'SKY-Icon';
+          color: $text-color;
+          font-size: 1.4rem;
+        }
+      }
+    }
+
+    .box-play {
+      flex: 1;      
+      @include header-button();
+    }
+
+    .box-signIn {
+      padding: 0 20px;
+      @include header-button();
+    }
+
+    .box-search {
+      @include header-button();
+    }
+
+    .box-menu-button {
+      @include header-button();
+    }
+
+    .box-menu-button {
+      display: none;
+        span {
+        width: 22px;
+        height: 2px;       
+        background: #000;
+        display: block;
+
+        & + span{
+          margin-top: 4px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    .box-header {
+      justify-content: space-between;
+      padding: 10px 15px;
+
+      .box-acessibility,
+      .box-play,
+      .box-signIn,
+      .box-search {
+        display: none;
+      }
+
+      .box-menu-button {
+        display: block;
+      }
+    }
+  }
+}
